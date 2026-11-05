@@ -78,13 +78,13 @@ export default function App() {
         <div className="min-h-screen bg-black text-white overflow-x-hidden">
           <AnimatePresence>{showWelcome && <WelcomeScreen />}</AnimatePresence>
 
-          <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-5 backdrop-blur-xl bg-black/20 border-b border-white/10">
+          <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 md:py-5 backdrop-blur-xl bg-black/20 border-b border-white/10">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full border border-white/20 bg-white/10 flex items-center justify-center text-[10px] font-bold text-white tracking-wider">
                 AS
               </div>
 
-              <span className="text-[10px] md:text-xs tracking-[0.3em] text-white/70 uppercase font-medium">
+              <span className="whitespace-nowrap text-[9px] tracking-[0.18em] text-white/80 uppercase font-medium sm:text-[10px] md:text-xs md:tracking-[0.3em]">
                 AARISH SAIFI
               </span>
             </div>
@@ -226,82 +226,66 @@ export default function App() {
 
           <section
             id="Home"
-            className="relative w-full h-screen min-h-[640px] overflow-hidden bg-black"
+            className="relative min-h-[100svh] w-full overflow-hidden bg-black md:h-screen md:min-h-[640px]"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 hidden items-center justify-center md:flex">
               <img
                 src={heroEye}
-                alt="Hero"
-                className="h-full w-full object-cover object-[68%_center] md:h-[90%] md:w-[90%] md:object-contain md:object-center"
+                alt="Aarish Saifi in a black suit"
+                fetchPriority="high"
+                decoding="async"
+                className="h-[90%] w-[90%] object-contain object-center"
               />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/35" />
             </div>
 
-            <div className="relative z-10 w-full h-full flex flex-col justify-between px-6 md:px-12 pt-24 pb-10">
+            <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-[1600px] flex-col px-5 pb-7 pt-24 sm:px-8 md:h-full md:min-h-0 md:justify-between md:px-12 md:pb-10 md:pt-24">
               <h1
                 onClick={() => setColorMode((prev) => (prev + 1) % colors.length)}
-                className={`font-display uppercase leading-[0.85] tracking-[-0.03em] text-[22vw] md:text-[14vw] lg:text-[13rem] cursor-pointer transition-all duration-300 ${colors[colorMode]}`}
+                className={`cursor-pointer font-display text-[clamp(4.25rem,20vw,8rem)] uppercase leading-[0.82] tracking-[-0.04em] transition-all duration-300 md:text-[14vw] lg:text-[13rem] ${colors[colorMode]}`}
               >
                 {displayed || "\u00A0"}
               </h1>
 
-              <p className="md:absolute md:top-28 md:right-12
-mt-4 md:mt-0
-text-right
-text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-leading-[1.08]
-max-w-md
-font-[Poppins] font-bold
-tracking-wide
-text-transparent bg-clip-text
-bg-[length:200%_auto]
-bg-gradient-to-r
-from-white via-white/60 to-white
-animate-[shine_4s_linear_infinite]">
-                Turning ideas
-                <br />
-                into AI-powered
-                <br />
-                products that
-                <br />
-                solve real problems.
+              <p className="mt-3 max-w-[20ch] self-end text-right font-[Poppins] text-[clamp(1.35rem,6vw,2rem)] font-bold leading-tight tracking-wide text-white md:absolute md:right-12 md:top-28 md:mt-0 md:max-w-md md:text-4xl lg:text-5xl">
+                <span className="md:hidden">
+                  Turning ideas into AI-powered products that solve real problems.
+                </span>
+                <span className="hidden md:inline">
+                  Turning ideas
+                  <br />
+                  into AI-powered
+                  <br />
+                  products that
+                  <br />
+                  solve real problems.
+                </span>
               </p>
 
-              <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mt-auto">
-                <p className="relative text-sm sm:text-base lg:text-xl
-    leading-relaxed max-w-md
-    font-[Poppins] font-medium
-    tracking-wide
-    text-transparent bg-clip-text
-    bg-[length:200%_auto]
-    bg-gradient-to-r
-    from-white via-white/60 to-white
-    animate-[shine_4s_linear_infinite]">
-                  Computer Science Engineering Student · <br />
-                  <em className="not-italic text-white">
-                    Web Developer · AI Enthusiast
-                  </em>
-                </p>
+              <div className="relative mt-5 h-[48svh] min-h-[300px] max-h-[440px] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#080808] sm:h-[54svh] md:hidden">
+                <img
+                  src={heroEye}
+                  alt="Aarish Saifi wearing a black suit"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="h-full w-full object-contain object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+              </div>
 
-                <div className="flex flex-wrap items-center gap-3">
-                  <a
-                    href="https://github.com/aarish159"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-black"
-                  >
+              <div className="mt-auto flex flex-col gap-4 pt-7 md:mt-0 md:flex-row md:items-end md:justify-between md:gap-6 md:pt-0">
+                <p className="max-w-md font-[Poppins] text-sm font-medium leading-relaxed tracking-wide text-white/85 sm:text-base md:text-xl">
+                  Computer Science Engineering Student ·<br className="hidden sm:block" />
+                  <em className="not-italic text-white">Web Developer · AI Enthusiast</em>
+                </p>
+                <div className="grid w-full grid-cols-2 gap-3 md:flex md:w-auto md:flex-wrap md:items-center md:justify-end">
+                  <a href="https://github.com/aarish159" target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/25 px-3 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-white hover:text-black sm:px-5 sm:text-xs md:w-auto md:gap-3 md:tracking-[0.2em]">
                     GitHub <ArrowUpRight size={16} />
                   </a>
-                  <Link
-                    to="/resume"
-                    className="inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-black"
-                  >
+                  <Link to="/resume" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/25 px-3 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-white hover:text-black sm:px-5 sm:text-xs md:w-auto md:gap-3 md:tracking-[0.2em]">
                     View Resume <ArrowUpRight size={16} />
                   </Link>
-                  <button
-                    type="button"
-                    onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                    className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-black transition-all hover:bg-white/80"
-                  >
+                  <button type="button" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })} className="col-span-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-black transition-all hover:bg-white/80 md:col-span-1 md:w-auto md:gap-3 md:tracking-[0.2em]">
                     Contact Me <ArrowUpRight size={16} />
                   </button>
                 </div>

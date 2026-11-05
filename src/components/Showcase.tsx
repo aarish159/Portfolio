@@ -591,7 +591,7 @@ function TechGrid() {
         {/* Scene */}
         <div
           ref={sceneRef}
-          className="relative"
+          className="relative origin-center scale-[0.68] sm:scale-[0.82] md:scale-100"
           style={{ width: "420px", height: "420px" }}
         >
           {techStack.map((tech, i) => (
