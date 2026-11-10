@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { FaInstagram, FaGithub, FaYoutube, FaTelegram } from "react-icons/fa";
 
 
 export default function ContactSection() {
@@ -26,7 +25,7 @@ export default function ContactSection() {
 
         const text = `Hello, my name is ${form.name}%0A%0A${form.message}`;
 
-        const phone = "91000000000";
+        const phone = "919582994515";
 
         window.open(
             `https://wa.me/${phone}?text=${text}`,
@@ -38,8 +37,8 @@ export default function ContactSection() {
 
     return (
         <section
-            className="relative w-full min-h-screen bg-black overflow-hidden
-            px-4 sm:px-8 md:px-16 lg:px-24 py-24 text-white"
+            className="relative w-full bg-black overflow-hidden
+            px-4 sm:px-8 md:px-16 lg:px-24 py-16 md:py-24 text-white"
         >
             {/* premium grid background */}
             <div
@@ -148,7 +147,7 @@ export default function ContactSection() {
 
                             {/* gmail */}
                             <a
-                                href="mailto:sprince05873@gmail.com"
+                                href="mailto:aarishhh007@gmail.com"
                                 className="group relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl
                 border border-white/10
                 bg-white/[0.04]
@@ -178,7 +177,7 @@ export default function ContactSection() {
 
                             {/* whatsapp */}
                             <a
-                                href="https://wa.me/910000000000"
+                                href="https://wa.me/919582994515"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl
@@ -287,7 +286,7 @@ export default function ContactSection() {
                                 <div className="space-y-3">
                                     <div className="flex items-baseline gap-3">
                                         <h2 className="text-2xl font-black tracking-tight bg-gradient-to-r from-white via-white to-white/70 bg-clip-text text-transparent">
-                                            Send Message
+                                             Send Message
                                         </h2>
 
                                         <span className="text-xs uppercase tracking-widest text-white/25 font-mono">
@@ -532,92 +531,42 @@ export default function ContactSection() {
                     </h2>
                     
                     <div className="flex flex-wrap items-center justify-center gap-5">
-                        {/* Instagram */}
+                        {/* LinkedIn */}
                         <a
-                            href="https://www.instagram.com/prince_kumar_74_"
+                            href="https://www.linkedin.com/in/aarish-saifi-4a1929327/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Instagram"
+                            aria-label="LinkedIn"
                             className="group relative grid h-14 w-14 place-items-center overflow-hidden rounded-[20px]
-    border border-white/10 bg-white/[0.05] backdrop-blur-2xl
-    shadow-[0_10px_30px_rgba(0,0,0,0.28)]
-    transition-all duration-500 ease-out
-    hover:-translate-y-1.5 hover:scale-105 hover:border-white/30"
+                            border border-white/10 bg-white/[0.05] backdrop-blur-2xl
+                            shadow-[0_10px_30px_rgba(0,0,0,0.28)]
+                            transition-all duration-500 ease-out
+                            hover:-translate-y-1.5 hover:scale-105 hover:border-sky-400/50"
                         >
-                            {/* YOUR INSTAGRAM GRADIENT */}
-                            <div
-                                className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                                style={{
-                                    background:
-                                        "linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7)",
-                                }}
-                            />
-
-                            {/* inner dark glass */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-sky-500/18 via-blue-500/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                             <div className="absolute inset-[1px] rounded-[19px] bg-[#0b0b12]/80" />
+                            <div className="absolute -inset-6 bg-sky-500/0 blur-2xl transition-all duration-500 group-hover:bg-sky-500/20" />
 
-                            {/* glow */}
-                            <div className="absolute -inset-6 blur-2xl transition-all duration-500 group-hover:bg-white/10" />
-
-                            {/* icon */}
-                            <FaInstagram className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-white" />
+                            <FaLinkedinIn className="relative z-10 text-[26px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-sky-400" />
                         </a>
 
                         {/* GitHub */}
                         <a
-                            href="https://github.com/princekumar-dev74"
+                            href="https://github.com/aarish159"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="GitHub"
                             className="group relative grid h-14 w-14 place-items-center overflow-hidden rounded-[20px]
-        border border-white/10 bg-white/[0.05] backdrop-blur-2xl
-        shadow-[0_10px_30px_rgba(0,0,0,0.28)]
-        transition-all duration-500 ease-out
-        hover:-translate-y-1.5 hover:scale-105 hover:border-white/40"
+                            border border-white/10 bg-white/[0.05] backdrop-blur-2xl
+                            shadow-[0_10px_30px_rgba(0,0,0,0.28)]
+                            transition-all duration-500 ease-out
+                            hover:-translate-y-1.5 hover:scale-105 hover:border-white/40"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-white/16 via-slate-300/8 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                             <div className="absolute inset-[1px] rounded-[19px] bg-[#0b0b12]/80" />
                             <div className="absolute -inset-6 bg-white/0 blur-2xl transition-all duration-500 group-hover:bg-white/12" />
 
-                            <FaGithub className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-white" />
-                        </a>
-
-                        {/* YouTube */}
-                        <a
-                            href="https://www.youtube.com/@WebKaizenDev"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="YouTube"
-                            className="group relative grid h-14 w-14 place-items-center overflow-hidden rounded-[20px]
-        border border-white/10 bg-white/[0.05] backdrop-blur-2xl
-        shadow-[0_10px_30px_rgba(0,0,0,0.28)]
-        transition-all duration-500 ease-out
-        hover:-translate-y-1.5 hover:scale-105 hover:border-red-400/50"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-red-500/18 via-rose-500/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                            <div className="absolute inset-[1px] rounded-[19px] bg-[#0b0b12]/80" />
-                            <div className="absolute -inset-6 bg-red-500/0 blur-2xl transition-all duration-500 group-hover:bg-red-500/20" />
-
-                            <FaYoutube className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-red-400" />
-                        </a>
-
-                        {/* Telegram */}
-                        <a
-                            href="https://t.me/web_kaizen_official"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Telegram"
-                            className="group relative grid h-14 w-14 place-items-center overflow-hidden rounded-[20px]
-        border border-white/10 bg-white/[0.05] backdrop-blur-2xl
-        shadow-[0_10px_30px_rgba(0,0,0,0.28)]
-        transition-all duration-500 ease-out
-        hover:-translate-y-1.5 hover:scale-105 hover:border-sky-400/50"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-sky-500/18 via-cyan-400/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                            <div className="absolute inset-[1px] rounded-[19px] bg-[#0b0b12]/80" />
-                            <div className="absolute -inset-6 bg-sky-500/0 blur-2xl transition-all duration-500 group-hover:bg-sky-500/20" />
-
-                            <FaTelegram className="relative z-10 text-[30px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-sky-400" />
+                            <FaGithub className="relative z-10 text-[28px] text-white transition-all duration-500 group-hover:scale-110 group-hover:text-white" />
                         </a>
                     </div>
 
@@ -627,7 +576,7 @@ export default function ContactSection() {
   Copyright © {new Date().getFullYear()} All Rights Reserved | Created by{" "}
   
   <span className="relative inline-block text-white/70">
-    prince
+    Aarish Saifi
     <span className="absolute left-1/2 -translate-x-1/2 -bottom-2">
       <div className="h-px w-24 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
     </span>

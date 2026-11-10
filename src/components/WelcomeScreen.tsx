@@ -141,9 +141,9 @@ export default function WelcomeScreen() {
             delay: 1.8,
             duration: 1,
           }}
-          className="text-sm text-white/60 tracking-wide"
+          className="text-sm text-white/60 tracking-wide text-center"
         >
-          Creating Websites That Feel Alive.
+          Turning ideas into AI-powered products that solve real problems.
         </motion.p>
 
         {/* Website Badge */}
@@ -154,20 +154,19 @@ export default function WelcomeScreen() {
             delay: 2,
             duration: 0.5,
           }}
-          className="px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs tracking-[0.25em] text-white/70 shadow-[0_0_30px_rgba(255,255,255,0.04)] overflow-hidden"
+          className="px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs tracking-[0.25em] text-white/70 shadow-[0_0_30px_rgba(255,255,255,0.04)]"
         >
-          <motion.span
-            initial={{ width: "0ch" }}
-            animate={{ width: "22ch" }}
-            transition={{
-              delay: 2.2,
-              duration: 2,
-              ease: "easeInOut",
-            }}
-            className="inline-block overflow-hidden whitespace-nowrap"
-          >
-            www.webkaizen.in
-          </motion.span>
+          <span className="relative inline-block align-middle">
+            <span aria-hidden="true" className="invisible whitespace-nowrap">AARISH SAIFI</span>
+            <motion.span
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ delay: 2.2, duration: 1, ease: "linear" }}
+              className="absolute left-0 top-0 block overflow-hidden whitespace-nowrap"
+            >
+              AARISH SAIFI
+            </motion.span>
+          </span>
 
           <motion.span
             animate={{

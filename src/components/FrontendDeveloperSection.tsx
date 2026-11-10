@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const BandCard = lazy(() => import("./BandCard"));
 
@@ -57,10 +57,10 @@ export default function FrontendDeveloperSection() {
         duration: 1.8,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className="relative w-full min-h-screen bg-black text-white overflow-hidden flex items-start px-6 md:px-20 pt-16 md:pt-28 select-none"
+      className="relative w-full bg-black text-white overflow-hidden flex items-start px-5 md:px-20 pt-14 pb-16 md:pt-28 md:pb-20 select-none"
     >
       {/* TEXT */}
-      <div className="relative z-10 max-w-2xl">
+      <div className="relative z-10 max-w-2xl w-full">
         <motion.div className="flex items-center mb-6">
           <motion.span
             animate={{
@@ -96,16 +96,16 @@ export default function FrontendDeveloperSection() {
             initial={{ opacity: 0, scale: 0.85, y: 50 }}
             animate={inView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.85, y: 50 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-extrabold leading-[1.05] tracking-tight text-white text-[clamp(56px,9vw,120px)]"
+            className="font-extrabold leading-[1.05] tracking-tight text-white text-[clamp(44px,9vw,120px)]"
           >
-            Frontend
+            Web
           </motion.h1>
 
           <motion.h1
             initial={{ opacity: 0, x: -80, rotate: -4 }}
             animate={inView ? { opacity: 1, x: 0, rotate: 0 } : { opacity: 0, x: -80, rotate: -4 }}
             transition={{ duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="font-extrabold leading-[1.05] tracking-tight text-white/70 text-[clamp(56px,9vw,120px)] mb-6"
+            className="font-extrabold leading-[1.05] tracking-tight text-white/70 text-[clamp(44px,9vw,120px)] mb-4 md:mb-6"
           >
             Developer
           </motion.h1>
@@ -115,7 +115,7 @@ export default function FrontendDeveloperSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="relative text-sm sm:text-base lg:text-xl
+          className="relative text-sm sm:text-base lg:text-lg
     leading-relaxed max-w-md
     font-[Poppins] font-medium
     tracking-wide
@@ -125,17 +125,16 @@ export default function FrontendDeveloperSection() {
     from-white via-white/60 to-white
     animate-[shine_4s_linear_infinite]"
         >
-          Building modern websites with clean, responsive, elegant interfaces.
-          Turning ideas and designs into engaging digital experiences.
+          I build practical web and AI projects, from flood-response decision support to smarter e-commerce delivery tools and student-focused platforms.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="mt-6 flex flex-wrap gap-4"
+          className="mt-4 md:mt-6 flex flex-wrap gap-3"
         >
-          {["Next.js", "React.js", "TypeScript", "Tailwind CSS"].map((tech) => (
+          {["React.js", "Node.js", "Python", "MongoDB", "SQL", "C++"].map((tech) => (
             <div
               key={tech}
               className="
@@ -159,7 +158,7 @@ export default function FrontendDeveloperSection() {
           ))}
         </motion.div>
 
-        <div className="mt-8 flex flex-col [@media(min-width:540px)]:flex-row items-start md:items-center gap-4">
+        <div className="mt-6 md:mt-8 flex flex-wrap items-start gap-3">
           {/* Show Card Button */}
           <motion.button
             initial={{ opacity: 0, y: 30 }}
